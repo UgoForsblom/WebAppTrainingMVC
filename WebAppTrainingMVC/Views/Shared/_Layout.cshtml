@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/css/MineStyleSheet.css" rel="stylesheet" />
+
+</head>
+<body>
+    <header>
+            <h1><img src="~/images/LOGO.png" width=" 120" height=" 100"/></h1> 
+       
+        <nav>
+            <ul>
+                <li>
+                    @Html.ActionLink("Index", "Index", "Home")
+            </li>
+
+            <li>
+                @Html.ActionLink("About", "About", "Home")
+        </li>
+
+        <li>
+            @Html.ActionLink("Contact", "Contact", "Home")
+        </li>
+
+        <li>
+            <a asp-action="contactList" asp-controller="Home">contactList</a>
+        </li>
+
+        <li><a asp-action="Projects" asp-controller="Home">Projects</a></li>
+    </ul>
+    </nav>
+    </header>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer>
+        <p>The Time is @DateTime.Now &copy; Ugoforsblom</p>
+    </footer>
+</body>
+</html>
